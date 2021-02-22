@@ -1,9 +1,12 @@
 import requests as r
 from bs4 import BeautifulSoup as bs
 
+#job options
 posts = ['accounting-auditing-finance','admin-office','building-architecture','community-social-services','consulting-strategy','creative-design','customer-service-support','driver-transport-services','engineering-technology','farming-agriculture','health-safety','human-resources','legal-services','management-business-development','marketing-communications','medical-pharmaceutical','product-project-management','quality-control-assurance','research-teaching-training','sales','software-data','supply-chain-procurement','trades-services']
 
+#the start function which prints the posts list to the user
 def start(posts):
+    """Displaying the list of job categories available"""
     URL = 'https://www.brightermonday.co.ug/jobs'
     print("\u001b[47;1mWHICH JOB ARE YOU LOOKING FOR??\u001b[0m ")
     i =0
@@ -18,6 +21,7 @@ def start(posts):
             print()
             return URL+'/'+ posts[USER_INPUT]
 
+#starts the application
 def init():
     URL = start(posts)
     page = r.get(URL)
