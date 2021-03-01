@@ -50,4 +50,10 @@ def init():
         print(f"\u001b[36;1mJOB DESCRIPTION:\u001b[0m {job_desc.text.strip()}\u001b[0m")
         print()
 
-init()
+while True:
+    init()
+    answer = input("Are you done? (y/n): ")
+    if answer.lower() == 'n':
+        init()
+    if answer.lower() == 'y':
+        break
